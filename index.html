@@ -26,15 +26,44 @@
 			height: 100px;
 		}
 		.usual a{
+			position: relative;
 			width: calc(100% / 4);
-			height: 50px;
+			height: 100px;
 			line-height: 50px;
-			transition: all .3s;
+			transition: all .5s;
+		}
+		.usual a:before{
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -1;
+			width: 100%;
+			height: 50px;
+			background: #000;
+			transition: all .5s;
+		}
+		.usual a:nth-child(1):before{
+			background: #2B6ACB;
+		}
+		.usual a:nth-child(2):before{
+			background: #FF6249;
+		}
+		.usual a:nth-child(3):before{
+			background: #DDEE00;
+		}
+		.usual a:nth-child(4):before{
+			background: #5DC9D5;
 		}
 		.usual a:hover{
+			line-height: 100px;
+			text-shadow: 0 0 10px #000;
+			color: #fff;
+		}
+		.usual a:hover:before{
 			height: 100px;
 			line-height: 100px;
-			color: #fff;
 		}
 		.uncommon{
 			display: flex;
@@ -63,8 +92,10 @@
 			transition: all .3s;
 		}
 		.uncommon >div a:hover{
-			transform: scale(1.1);
+			/*transform: scale(1.06);*/
+			width: 95%;
 			color: #fff;
+			text-shadow: 0 0 10px #000;
 		}
 		/*背景*/
 		#particles-js{
@@ -126,15 +157,10 @@
 		function random(){
 			return Math.floor(Math.random()*color.length);
 		}
-		var usual=document.querySelector('.usual');
-		var usualA=document.querySelectorAll('.usual a');
 		var uncommon=document.querySelector('.uncommon');
 		var leftA=document.querySelectorAll('.uncommon .left a');
 		var midA=document.querySelectorAll('.uncommon .mid a');
 		var rightA=document.querySelectorAll('.uncommon .right a');
-		for (var i = 0; i < usualA.length; i++) {
-			usualA[i].style.background=color[random()];
-		}
 		Class(leftA);
 		Class(midA);
 		Class(rightA);
