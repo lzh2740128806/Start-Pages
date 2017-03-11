@@ -1,37 +1,70 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Start Pages</title>
-		<link rel="icon" href="img/logo.png">
-		<style>
-			html,body,div,canvas{
-				margin: 0;
-				padding: 0;
-			}
-			body{
-				padding:50px 0;
-			}
-			a{
-				display: block;
-				margin: 15px auto;
-				padding: 35px;
-				width: 65%;
-				background: #05B9FD;
-				text-align: center;
-				text-decoration: none;
-				color: #333;
-				font-size: 30px;
-				/*border: 1px solid #eee;*/
-				border-radius: 5px;
-				transition: all 0.5s;
-			}
-			a:hover{
-				background: #03FD7E;
-				transform: scale(1.1);
-			}
-
-			#particles-js{
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>start pages</title>
+	<style>
+		html,body,div,a{
+			margin: 0;
+			padding: 0;
+			font-family: '微软雅黑';
+			font-size: 20px;
+		}
+		a{
+			display: block;
+			user-select: none;
+			text-align: center;
+			text-decoration: none;
+			color: #000;
+		}
+		.usual{
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			width: 100%;
+			height: 100px;
+		}
+		.usual a{
+			width: calc(100% / 4);
+			height: 50px;
+			line-height: 50px;
+			transition: all .3s;
+		}
+		.usual a:hover{
+			height: 100px;
+			line-height: 100px;
+		}
+		.uncommon{
+			display: flex;
+			justify-content: center;
+		}
+		.uncommon >div{
+			width: calc(100% / 3);
+		}
+		.uncommon >div .title{
+			width: 100%;
+			height: 100px;
+			color: #ddd;
+			text-align: center;
+			line-height: 100px;
+			font-size: 25px;
+			font-weight: 800;
+			user-select: none;
+			cursor: default;
+		}
+		.uncommon >div a{
+			margin: 0 auto 10px;
+			width: 90%;
+			height: 75px;
+			line-height: 75px;
+			border-radius: 10px;
+			transition: all .3s;
+		}
+		.uncommon >div a:hover{
+			transform: scale(1.1);
+		}
+		/*背景*/
+		#particles-js{
 				position: fixed;
 				width: 100%;
 				height: 100%;
@@ -42,33 +75,72 @@
 			canvas{
 				background: #01212E;
 			}
-		</style>
-	</head>
-	<body>
-		<div id="particles-js"></div>
+	</style>
+</head>
+<body>
+	<div id="particles-js"></div>
+	<div class="usual">
 		<a href="https://www.baidu.com/?tn=baidulocal">百度</a>
 		<a href="https://www.google.com.hk/?gws_rd=ssl">谷歌</a>
 		<a href="https://github.com/">github</a>
-		<a href="https://www.oschina.net/">开源中国</a>
 		<a href="http://www.w3cschool.cn/">W3cshool</a>
-		<a gref="http://nav.react-china.org/">React中文导航</a>
-		<a href="https://wx.qq.com/">微信网页版</a>
-		<a href="http://www.ruanyifeng.com">阮一峰</a>
-		<a href="http://www.zhangxinxu.com">张鑫旭</a>
-		<a href="http://doubleray.win/">雷哥的个人博客</a>
-		<a href="https://home.cnblogs.com/">博客园</a>
-		<a href="https://www.jq22.com/">插件库</a>
-		<a href="https://www.pinterest.com/">pinterest图库</a>
-		<a href="https://isux.tencent.com/css3/tools.html">CSS3动画工具</a>
-		<a href="http://alloyteam.github.io/">腾讯Web前端团队</a>
-		<a href="https://isux.tencent.com/category/fd">前端技术-腾讯ISUX</a>
-		<a href="http://www.ylsc633.com/">叶落山城秋</a>
-		<a href="http://www.w2bc.com/">爱编程</a>
-		<a href="http://www.imooc.com/">慕课网</a>
-		<a href="http://www.qdfuns.com/">前端网</a>
-		<a href="http://www.lizhenhu.xyz/">我的网站</a>
-<!--		<a href=""></a> -->
-		<script src="js/particles.min.js"></script>
-		<script src="js/app.js"></script>
-	</body>
+	</div>
+	<div class="uncommon">
+		<div class="left">
+			<div class="title">资源网站</div>
+			<a href="https://www.oschina.net/">开源中国</a>
+			<a href="http://nav.react-china.org/">React中文导航</a>
+			<a href="http://www.w2bc.com/">爱编程</a>
+			<a href="http://www.imooc.com/">慕课网</a>
+			<a href="http://www.qdfuns.com/">前端网</a>
+			<a href="https://www.jq22.com/">插件库</a>
+			<a href="https://home.cnblogs.com/">博客园</a>
+			<a href="https://isux.tencent.com/css3/tools.html">CSS3动画工具</a>
+			<a href="https://www.pinterest.com/">pinterest图库</a>
+		</div>
+		<div class="mid">
+			<div class="title">个人博客</div>
+			<a href="http://www.ruanyifeng.com">阮一峰</a>
+			<a href="http://www.zhangxinxu.com">张鑫旭</a>
+			<a href="http://doubleray.win/">雷哥的博客</a>
+			<a href="http://frontlich.com/">李晨的博客</a>
+			<a href="http://www.ylsc633.com/">叶落山城秋</a>
+			<a href="http://alloyteam.github.io/">腾讯Web前端团队</a>
+			<a href="https://isux.tencent.com/category/fd">前端技术-腾讯ISUX</a>
+		</div>
+		<div class="right">
+			<div class="title">其他</div>
+			<a href="https://wx.qq.com/">微信网页版</a>
+			<a href="https://mail.qq.com">qq邮箱</a>
+			<a href="https://wanwang.aliyun.com/">万网-阿里云</a>
+		</div>
+	</div>
+	<script>
+		var color=["#89F5D1","#D3FFFE","#FED000","#A7CBFF","#FFFE65","#552589","#9FAEFF","#FE504F","#FED000","#879EFE","#2B6ACB","#B0AED3","#FF6249","#CDF230","#DDEE00","#FFACC6","#504FC7","#FFD1C1","#5DC9D5"];
+		//取随机数
+		function random(){
+			return Math.floor(Math.random()*color.length);
+		}
+		var usual=document.querySelector('.usual');
+		var usualA=document.querySelectorAll('.usual a');
+		var uncommon=document.querySelector('.uncommon');
+		var leftA=document.querySelectorAll('.uncommon .left a');
+		var midA=document.querySelectorAll('.uncommon .mid a');
+		var rightA=document.querySelectorAll('.uncommon .right a');
+		for (var i = 0; i < usualA.length; i++) {
+			usualA[i].style.background=color[random()];
+		}
+		Class(leftA);
+		Class(midA);
+		Class(rightA);
+		function Class(obj){
+			var c=color[random()];
+			for (var i = 0 ; i < obj.length; i++) {
+				obj[i].style.background=c;
+			}
+		}
+	</script>
+	<script src="js/particles.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
 </html>
