@@ -208,9 +208,11 @@
 		var leftA=document.querySelectorAll('.uncommon .left a');
 		var midA=document.querySelectorAll('.uncommon .mid a');
 		var rightA=document.querySelectorAll('.uncommon .right a');
-		Class(leftA);
-		Class(midA);
-		Class(rightA);
+		setInterval(function(){
+			Class(leftA);
+			Class(midA);
+			Class(rightA);
+		},2000);
 		function Class(obj){
 			var c=color[random()];
 			for (var i = 0 ; i < obj.length; i++) {
