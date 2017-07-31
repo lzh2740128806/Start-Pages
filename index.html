@@ -114,7 +114,7 @@
 			height: 75px;
 			line-height: 75px;
 			border-radius: 10px;
-			transition: all .3s;
+			transition: all .5s;
 		}
 		.uncommon >div a:hover{
 			/*transform: scale(1.06);*/
@@ -208,6 +208,9 @@
 		var leftA=document.querySelectorAll('.uncommon .left a');
 		var midA=document.querySelectorAll('.uncommon .mid a');
 		var rightA=document.querySelectorAll('.uncommon .right a');
+		Class(leftA);
+		Class(midA);
+		Class(rightA);
 		setInterval(function(){
 			Class(leftA);
 			Class(midA);
