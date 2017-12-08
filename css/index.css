@@ -1,0 +1,129 @@
+html,body,div,a{
+	margin: 0;
+	padding: 0;
+	font-family: '微软雅黑';
+	font-size: 20px;
+}
+a{
+	display: block;
+	user-select: none;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+@media only screen and (max-width: 700px){
+	html,body,div,a{
+		font-size: 17px;
+	}
+}
+@media only screen and (max-width: 600px){
+	html,body,div,a{
+		font-size: 15px;
+	}
+}
+@media only screen and (max-width: 500px){
+	html,body,div,a{
+		font-size: 12px;
+	}
+}
+.usual{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	width: 100%;
+	height: 100px;
+}
+.usual a{
+	position: relative;
+	width: calc(100% / 5);
+	height: 100px;
+	line-height: 50px;
+	transition: all .5s;
+}
+.usual a:before{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: 50px;
+	background: #000;
+	transition: all .5s;
+}
+.usual a:nth-child(1):before{
+	background: #81c2d6;
+}
+.usual a:nth-child(2):before{
+	background: #8192d6;
+}
+.usual a:nth-child(3):before{
+	background: #d9b3e6;
+}
+.usual a:nth-child(4):before{
+	background: #dcf7a1;
+}
+.usual a:nth-child(5):before{
+	background: #83fcd8;
+}
+.usual a:hover{
+	line-height: 100px;
+	text-shadow: 0 0 10px #000;
+	color: #fff;
+}
+.usual a:hover:before{
+	height: 100px;
+	line-height: 100px;
+	border-radius: 0 0 20px 20px;
+}
+.uncommon{
+	display: flex;
+	justify-content: center;
+}
+.uncommon >div{
+	width: calc(100% / 3);
+}
+.uncommon >div .title{
+	width: 100%;
+	height: 100px;
+	color: #ddd;
+	text-align: center;
+	line-height: 100px;
+	font-size: 25px;
+	font-weight: 800;
+	user-select: none;
+	cursor: default;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.uncommon >div a{
+	margin: 0 auto 10px;
+	width: 90%;
+	height: 75px;
+	line-height: 75px;
+	border-radius: 10px;
+	transition: all .5s;
+}
+.uncommon >div a:hover{
+	/*transform: scale(1.06);*/
+	width: 95%;
+	color: #fff;
+	text-shadow: 0 0 10px #000;
+}
+/*背景*/
+#particles-js{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}
+canvas{
+	background: #01212E;
+}
