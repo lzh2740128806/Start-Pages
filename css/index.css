@@ -107,7 +107,7 @@ a{
 	height: 75px;
 	line-height: 75px;
 	border-radius: 10px;
-	transition: background all .5s;
+	transition: background .5s;
 }
 .uncommon >div a:hover{
 	/*transform: scale(1.06);*/
