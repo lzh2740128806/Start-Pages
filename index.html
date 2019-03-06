@@ -54,8 +54,6 @@
 			<a href="http://alloyteam.github.io/">腾讯Web前端团队</a>
 			<a href="https://isux.tencent.com/category/fd">前端技术-腾讯ISUX</a>
 			<a href="https://coolshell.cn/">酷壳</a>
-			<a href="http://doubleray.win/">雷哥的博客</a>
-			<a href="http://frontlich.com/">李晨的博客</a>
 		</div>
 		<div class="right">
 			<div class="title">其他</div>
@@ -83,17 +81,17 @@
 		</div>
 	</div>
 	<script>
-		//var color=["#89F5D1","#D3FFFE","#FED000","#A7CBFF","#FFFE65","#552589","#9FAEFF","#FE504F","#FED000","#879EFE","#2B6ACB","#B0AED3","#FF6249","#CDF230","#DDEE00","#FFACC6","#504FC7","#FFD1C1","#5DC9D5"];
+		//var color = ["#89F5D1","#D3FFFE","#FED000","#A7CBFF","#FFFE65","#552589","#9FAEFF","#FE504F","#FED000","#879EFE","#2B6ACB","#B0AED3","#FF6249","#CDF230","#DDEE00","#FFACC6","#504FC7","#FFD1C1","#5DC9D5"];
 		
-		var color=['#f7ffa8','#b8f788','#58d2e8','#e8ed51','#def9ae','#bbed93','#8bd6c0'];
+		var color = ['#f7ffa8','#b8f788','#58d2e8','#e8ed51','#def9ae','#bbed93','#8bd6c0'];
 		//取随机数
 		function random(){
 			return Math.floor(Math.random()*color.length);
 		}
-		var uncommon=document.querySelector('.uncommon');
-		var leftA=document.querySelectorAll('.uncommon .left a');
-		var midA=document.querySelectorAll('.uncommon .mid a');
-		var rightA=document.querySelectorAll('.uncommon .right a');
+		var uncommon = document.querySelector('.uncommon');
+		var leftA = document.querySelectorAll('.uncommon .left a');
+		var midA = document.querySelectorAll('.uncommon .mid a');
+		var rightA = document.querySelectorAll('.uncommon .right a');
 		Class(leftA);
 		Class(midA);
 		Class(rightA);
@@ -101,11 +99,11 @@
 			Class(leftA);
 			Class(midA);
 			Class(rightA);
-		},2000);
+		},5000);
 		function Class(obj){
-			var c=color[random()];
+			var c = color[random()];
 			for (var i = 0 ; i < obj.length; i++) {
-				obj[i].style.background=c;
+				obj[i].style.background = c;
 			}
 		}
 	</script>
